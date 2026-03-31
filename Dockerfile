@@ -6,6 +6,6 @@ COPY . .
 
 RUN chmod +x mvnw
 
-RUN ./mvnw clean package -DskipTests -Dspring.datasource.url=jdbc:h2:mem:testdb
+RUN ./mvnw clean package -DskipTests
 
 CMD ["sh", "-c", "java -jar target/*.jar"]
